@@ -1,0 +1,7 @@
+wandb
+faiss-gpu
+scikit-learn
+torch
+torchvision
+torchaudio
+numpy
