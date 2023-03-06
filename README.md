@@ -58,11 +58,20 @@ Coming soon...
 
 ![](imgs/LOCO_demo_fig.png)
 
-<!---
+
 # Citation
-If you find this useful for your research, please use the following.
+If you find this useful for your research, please use the following citation:
 
 ```
+@misc{https://doi.org/10.48550/arxiv.2302.12245,
+  doi = {10.48550/ARXIV.2302.12245},  
+  url = {https://arxiv.org/abs/2302.12245},
+  author = {Cohen, Niv and Tzachor, Issar and Hoshen, Yedid},
+  keywords = {Computer Vision and Pattern Recognition (cs.CV), Machine Learning (cs.LG), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  title = {Set Features for Fine-grained Anomaly Detection},
+  publisher = {arXiv},
+  year = {2023},
+  copyright = {arXiv.org perpetual, non-exclusive license}
+}
 
 ```
--->
