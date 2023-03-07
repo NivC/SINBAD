@@ -1,7 +1,7 @@
+numpy
 wandb
-faiss-gpu
+faiss-cpu
 scikit-learn
 torch
 torchvision
 torchaudio
-numpy
