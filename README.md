@@ -25,7 +25,7 @@ pip install -r requirements.txt
 1. Download the data:
 ```
 mkdir ../dataset_loco
-cd ../dataset_loco`
+cd ../dataset_loco
 wget https://www.mydrive.ch/shares/48237/1b9106ccdfbb09a0c414bd49fe44a14a/download/430647091-1646842701/mvtec_loco_anomaly_detection.tar.xz
 tar -xf mvtec_loco_anomaly_detection.tar.xz
 ```
