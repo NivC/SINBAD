@@ -11,8 +11,8 @@ Official PyTorch Implementation for the "Set Features for Fine-grained Anomaly D
 ### Setup 
 1. Clone this repo:
 ```bash
-git clone https://github.com/eliahuhorwitz/Conffusion.git
-cd sinbad
+git clone https://github.com/NivC/SINBAD.git
+cd SINBAD
 ```
 2. Create a new environment and install the libraries:
 ```bash
