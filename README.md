@@ -1,4 +1,4 @@
-# SINBAD - Set Features for Fine-grained Anomaly Detection
+# [SINBAD - Set Features for Fine-grained Anomaly Detection](https://arxiv.org/abs/2302.12245)
 
 Official PyTorch Implementation for the "Set Features for Fine-grained Anomaly Detection" paper.
 
