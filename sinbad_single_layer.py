@@ -32,6 +32,7 @@ parser.add_argument('--n_quantiles', default=5, type=int)
 parser.add_argument('--epochs', default=1, type=int)
 parser.add_argument('--batch_size', default=32, type=float)
 parser.add_argument('--shrinkage_factor', default=0.1, type=float) #shrinkage factor for whitening
+parser.add_argument('--rep', default=0, type=int) #repitition number
 
 args = parser.parse_args()
 
@@ -56,10 +57,10 @@ wandb.init(project="mvtec_loco_sinbad_wandb_" + args.version_name, entity="nivco
 wandb.config = args
 
 
-anom_maps_output_path = "../sinbad_runs/%s_pyramid_lvl_%d/%s"%\
-                        (args.version_name, args.pyramid_level, mvtype)
+anom_maps_output_path = "../sinbad_runs/results/%s_pyramid_lvl_%d/rep_num_%d/%s"%\
+                        (args.version_name, args.pyramid_level, args.rep, mvtype)
+print("anom_maps_output_path",anom_maps_output_path)
 os.makedirs(anom_maps_output_path,exist_ok=True)
-
 
 if args.pyramid_level == 224:
     args.crop_size_ratio = 0.999

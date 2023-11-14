@@ -5,6 +5,36 @@ import numpy as np
 import faiss
 from sklearn.covariance import ShrunkCovariance
 
+from sklearn.neighbors import NearestNeighbors
+from sklearn.neighbors import DistanceMetric
+
+class kNN_shrunk_l1:
+    def __init__(self, target, K, is_cpu, is_whitening, is_vector = False, shrinkage_factor = 0.1):
+
+
+        dist = DistanceMetric.get_metric('l1')
+        # Create KNN Classifier
+        self.knn = NearestNeighbors(n_neighbors=1, metric='l1')
+
+        # Train the model using the training sets
+
+        self.knn.fit(target)
+
+
+    def train(self, type):
+
+        pass
+
+    def score(self, src, is_return_ind = False):
+
+        D, I = self.knn.kneighbors(src, return_distance=True)
+
+        #D, I = self.gpu_index.search(np.ascontiguousarray(src.astype('float32')), self.K)
+
+        if is_return_ind:
+            return D, I
+        else:
+            return D
 
 
 

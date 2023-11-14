@@ -54,7 +54,32 @@ python sinbad_single_layer.py --mvtype breakfast_box_loco  --pyramid_level 7
 
 
 ## Combine different pyramid levels 
-Coming soon...
+This example uses slurm to run the different pyramid levels in parallel. <br>
+1. Create and run scripts to run the different pyramid levels; first the ResNet blocks, and then the raw pixels ("224"):
+
+```
+mkdir ../sinbad_runs/sbatches
+python create_batch_array_sinbad.py
+cd ../sinbad_runs/sbatches
+sh batch_master.sh
+``` 
+
+```
+mkdir ../sinbad_runs/sbatches_224
+python create_batch_array_sinbad_224.py
+cd ../sinbad_runs/sbatches_224
+sh batch_master.sh
+```
+Combine the results from the different pyramid levels in an ensemble:
+```
+cd SINBAD
+python calc_anom_ensm.py 
+--mvtype loco 
+--version /path/to/sinbad_runs/results/ver1_pyramid_lvl_#  
+--version_224  /path/to/sinbad_runs/results/ver1_pyramid_lvl_#
+```
+where `mvtype` is the class name (or `loco`/`struct`/`all` for a group of classes)
+and `version` and `version_224` is the path to the results of the different pyramid levels created by the previous script. <br>
 
 ![](imgs/LOCO_demo_fig.png)
 
