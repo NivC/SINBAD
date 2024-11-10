@@ -83,6 +83,9 @@ and `version` and `version_224` is the path to the results of the different pyra
 
 ![](imgs/LOCO_demo_fig.png)
 
+## Time-series datasets
+
+The implementation for the time-series experiments can be found here: https://github.com/yedidh/radonomaly
 
 # Citation
 If you find this useful for your research, please use the following citation:
